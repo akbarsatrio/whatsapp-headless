@@ -101,7 +101,7 @@ app.post('/send-message', (req, res) => {
   });
 })
 
-
+// Bulk message (Boradcast)
 app.post('/send-bulk', (req, res) => {
   const message = req.body.message;
   const contact = req.body.number;
@@ -109,6 +109,23 @@ app.post('/send-bulk', (req, res) => {
   for (let i = 0; i < contact.length; i++) {
     client.sendMessage(contact[i], message);
     if(i+1 == contact.length){
+      res.status(200).json({
+        status: true,
+        response: 'Selesai'
+      });
+    }
+  }
+})
+
+// Bom message
+app.post('/send-bom', (req, res) => {
+  const message = req.body.message;
+  const contact = req.body.number;
+  const limit = req.body.limit;
+
+  for (let i = 0; i < limit; i++) {
+    client.sendMessage(contact, message);
+    if(i+1 == limit){
       res.status(200).json({
         status: true,
         response: 'Selesai'
