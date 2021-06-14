@@ -12,7 +12,7 @@
 - Jalankan `npm install` untuk menginstall seluruh depedency yang diperlukan
 - Jalankan `npm run start:dev`. Jika mengunaan nodemon, ketik `nodemon` pada temrinal
 - Buka browser dan buka `http://localhost:8000`
-- Note: Sesi whatsapp masih menggunakan whatsapp saya (digunakan untuk demo). Jika ingin menggunakan nomor whatsapp Anda, silahkan hapus file `selalusiap-sess.json`
+- Note: Sesi whatsapp masih menggunakan whatsapp saya (digunakan untuk demo). Jika ingin menggunakan nomor whatsapp Anda, silahkan hapus file `selalusiap-sess.json` lalu scan qr ulang lewat browser
 
 ### Penggunaan API
 Anda bisa mengirim pesan secara langsung melalui API ini, ada 2 endpoint yang dibuat yaitu:
